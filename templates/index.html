@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English to Indic Translator</title>
+</head>
+<body>
+    <h1>English to Indic Translator</h1>
+    <form method="POST">
+        <label for="english_text">Enter English text:</label><br>
+        <textarea id="english_text" name="english_text" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Translate">
+    </form>
+
+    {% if original_text %}
+    <h2>Original text:</h2>
+    <p>{{ original_text }}</p>
+
+    <h2>Translated text:</h2>
+    <p>{{ translated_text }}</p>
+    {% endif %}
+</body>
+</html>
